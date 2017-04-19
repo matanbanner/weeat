@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  genre: MyString
+  rating: 
+  tenbis: false
+  address: MyString
+  delivery_time: MyString
+
+two:
+  name: MyString
+  genre: MyString
+  rating: 
+  tenbis: false
+  address: MyString
+  delivery_time: MyString
