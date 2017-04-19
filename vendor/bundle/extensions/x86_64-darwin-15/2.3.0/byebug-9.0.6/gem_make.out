@@ -1,0 +1,19 @@
+current directory: /Users/matanbanner/Documents/weeat/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+/Users/matanbanner/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20170419-82965-upzayp.rb extconf.rb
+creating Makefile
+
+current directory: /Users/matanbanner/Documents/weeat/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/matanbanner/Documents/weeat/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/matanbanner/Documents/weeat/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20170419-82965-1qavrd3/byebug
