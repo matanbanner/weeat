@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170419121747) do
+ActiveRecord::Schema.define(version: 20170419153126) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(version: 20170419121747) do
     t.integer  "rating"
     t.boolean  "tenbis"
     t.string   "address"
-    t.string   "delivery_time"
+    t.integer  "delivery_time"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["name"], name: "index_restaurants_on_name", unique: true
   end
 
 end
