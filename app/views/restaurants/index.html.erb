@@ -1,35 +1,110 @@
+<link href = "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel = "stylesheet">
+
 <p id="notice"><%= notice %></p>
 
 <header>
-   <div class="search_bar">
-     <div class="container1">
-     <h1>WeEat</h1>
-     <h6>It’s 12:00 and you’re hungry.</h6>
-     <%=text_field_tag :name%>
-   </div>
+  <div class="header_content">
 
-   </div>
+    <div class="title">
+      <h1>WeEat</h1>
+      <h6>It’s 12:00 and you’re hungry.</h6>
+    </div>
 
-   <div class="selects" >
-     <select id="user_id" name="user_id">
-       <option value="1">Brad</option>
-       <option value="2">Angie</option>
-       <option value="3">Jenny</option>
-     </select>
-     <select id="user_id" name="user_id">
-       <option value="1">Brad</option>
-       <option value="2">Angie</option>
-       <option value="3">Jenny</option>
-     </select>
-     <select id="user_id" name="user_id">
-       <option value="1">Brad</option>
-       <option value="2">Angie</option>
-       <option value="3">Jenny</option>
-     </select>
-
-   </div>
-
+    <form class="search">
+      <%=text_field_tag :name, nil, placeholder: 'Find a restaurant'%>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 </header>
+
+<div class=".container">
+
+  <form class="row filters form-inline">
+
+    <div class="col-md-3">
+        Cuisine <br>
+        <select id="user_id" name="user_id">
+          <option value="1">Brad</option>
+          <option value="2">Angie</option>
+          <option value="3">Jenny</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        Cuisine <br>
+        <select id="user_id" name="user_id">
+          <option value="1">Brad</option>
+          <option value="2">Angie</option>
+          <option value="3">Jenny</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        Cuisine <br>
+        <select id="user_id" name="user_id">
+          <option value="1">Brad</option>
+          <option value="2">Angie</option>
+          <option value="3">Jenny</option>
+        </select>
+    </div>
+
+    <div class="col-md-3">
+      <input type="submit" value="Submit" class="col-md-12">
+    </div>
+
+  </form>
+
+  <div class="row">
+    <div class="col-md-4 restaurants">
+      <div class="restaurant">
+        <div class="restaurant_content">
+          <span class="genre">
+            a
+          </span>
+          <span class="name">
+            Moses
+          </span>
+          <div class="rating">
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+          </div>
+        </div>
+      </div>
+      <div class="restaurant">
+        <div class="restaurant_content">
+          <span class="genre">
+            a
+          </span>
+          <span class="name">
+            Moses
+          </span>
+          <div class="rating">
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+          </div>
+        </div>
+      </div>
+      <div class="restaurant">
+        <div class="restaurant_content">
+          <span class="genre">
+            a
+          </span>
+          <span class="name">
+            Moses
+          </span>
+          <div class="rating">
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <!-- <table>
   <thead>
@@ -62,29 +137,7 @@
 </table> -->
 
 
-  <div class="rest_row">
-    <div class="rest_name">
-      Moses
-    </div>
-  </div>
 
-  <div class="rest_row">
-    <div class="rest_name">
-      Sushi
-    </div>
-  </div>
-
-  <div class="rest_row">
-    <div class="rest_name">
-      Falafel
-    </div>
-  </div>
-
-  <div class="rest_row">
-    <div class="rest_name">
-      Salad
-    </div>
-  </div>
 
 
 
