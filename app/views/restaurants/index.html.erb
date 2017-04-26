@@ -1,4 +1,3 @@
-<link href = "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel = "stylesheet">
 
 <p id="notice"><%= notice %></p>
 
@@ -23,22 +22,25 @@
 
     <div class="col-md-3">
         Cuisine <br>
-        <select id="user_id" name="user_id">
-          <option value="1">Brad</option>
-          <option value="2">Angie</option>
-          <option value="3">Jenny</option>
+        <select id="genre" name="genre">
+          <% @genres.each do |genre| %>
+            <option value=<%=genre%>><%=genre%></option>
+          <% end %>
         </select>
     </div>
     <div class="col-md-3">
-        Cuisine <br>
-        <select id="user_id" name="user_id">
-          <option value="1">Brad</option>
-          <option value="2">Angie</option>
-          <option value="3">Jenny</option>
+        Rating <br>
+        <select id="rating" name="user_id">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
         </select>
     </div>
     <div class="col-md-3">
-        Cuisine <br>
+        Speed <br>
         <select id="user_id" name="user_id">
           <option value="1">Brad</option>
           <option value="2">Angie</option>
@@ -54,51 +56,27 @@
 
   <div class="row">
     <div class="col-md-4 restaurants">
-      <div class="restaurant">
-        <div class="restaurant_content">
-          <span class="genre">
-            a
-          </span>
-          <span class="name">
-            Moses
-          </span>
-          <div class="rating">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
+
+      <% @restaurants.each do |restaurant| %>
+
+        <div class="restaurant">
+          <div class="restaurant_content">
+            <span class="genre"> <%= restaurant.genre %> </span>
+            <span class="name"> <%= restaurant.name %> </span>
+            <span>
+              <% if restaurant.tenbis %>
+                <img src="http://localhost:3000/assets/tenbis.png">
+              <% end %>
+            </span>
+            <div class="rating">
+              <% restaurant.rating.times do %>
+                <span class="glyphicon glyphicon-star"></span>
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="restaurant">
-        <div class="restaurant_content">
-          <span class="genre">
-            a
-          </span>
-          <span class="name">
-            Moses
-          </span>
-          <div class="rating">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-          </div>
-        </div>
-      </div>
-      <div class="restaurant">
-        <div class="restaurant_content">
-          <span class="genre">
-            a
-          </span>
-          <span class="name">
-            Moses
-          </span>
-          <div class="rating">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-          </div>
-        </div>
-      </div>
+
+      <% end %>
     </div>
   </div>
 </div>

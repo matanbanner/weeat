@@ -4,7 +4,14 @@ class RestaurantsController < ApplicationController
   # GET /restaurants
   # GET /restaurants.json
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant
+    @restaurants = @restaurants.where(name: params[:name]) if params[:name]
+    @restaurants = @restaurants.where(genre: params[:genre]) if params[:genre]
+    @restaurants = @restaurants.where(rating: params[:rating]) if params[:rating]
+    @restaurants = @restaurants.where(delivery_time: params[:delivery_time]) if params[:delivery_time]
+    @restaurants = @restaurants.all
+
+    @genres = Restaurant.all.pluck(:genre).sort
   end
 
   # GET /restaurants/1
