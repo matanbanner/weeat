@@ -3,14 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 header {
-  // background-color: blue;
   background-image: url("pizza15.jpg");
   height: 250px;
 
   .header_content {
     text-align: center;
     padding-top: 50px;
-    // background-color: green;
     .title {
       color: white;
     }
@@ -18,6 +16,11 @@ header {
       padding-top: 15px;
 
     }
+  }
+  .plus {
+    width:30px;
+    height:30px;
+
   }
 }
 
@@ -29,9 +32,15 @@ header {
   padding-bottom: 20px;
 
   #genre {
-    font-family: "EF Cuisines";
-    font-size: 53px;
+    // font-family: "EF Cuisines";
+    // font-size: 53px;
   }
+}
+
+.dropdown {
+  width: 200px;
+  margin: auto;
+
 }
 
 
@@ -50,6 +59,7 @@ header {
       .genre {
         font-family: "EF Cuisines";
         font-size: 53px;
+        color: red;
       }
     }
   }
