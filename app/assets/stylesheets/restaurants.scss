@@ -1,3 +1,65 @@
 // Place all the styles related to the Restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {
+  background-image: url("pizza15.jpg");
+  height: 250px;
+
+  .header_content {
+    text-align: center;
+    padding-top: 50px;
+    .title {
+      color: white;
+    }
+    .search {
+      padding-top: 15px;
+
+    }
+  }
+  .plus {
+    width:30px;
+    height:30px;
+  }
+}
+
+.filters {
+  text-align: center;
+  color: white;
+  background-color: red;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  #genre {
+    // font-family: "EF Cuisines";
+    // font-size: 53px;
+  }
+}
+
+.dropdown {
+  width: 200px;
+  margin: auto;
+
+}
+
+
+.restaurants {
+  background-color:  #FAFAFA;
+  height: 1000px;
+  .restaurant {
+    background-color: white;
+    height:100px;
+    margin-top: 10px;
+    margin-left: 12px;
+    .restaurant_content{
+      padding-left: 40px;
+      .name {
+      }
+      .genre {
+        font-family: "EF Cuisines";
+        font-size: 53px;
+        color: red;
+      }
+    }
+  }
+}

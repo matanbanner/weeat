@@ -1,9 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Restaurants</h1>
+<header>
+  <div class="header_content">
 
-<%= render 'restaurants', restaurants: @restaurants %>
+    <%= react_component("NewRestauratButton",props:{}) %>
+
+    <div class="title">
+      <h1>WeEat</h1>
+      <h6>It’s 12:00 and you’re hungry.</h6>
+    </div>
+
+    <form class="search">
+      <%=text_field_tag :name, nil, placeholder: 'Find a restaurant'%>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</header>
+
+
+  <%= react_component(
+    "RestaurantList",
+    props:{ json: @restaurants.map{|x| x.slice(:name, :genre, :rating, :tenbis)}.to_json}
+    )
+  %>
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<!-- <%= link_to 'New Restaurant', new_restaurant_path %> -->
